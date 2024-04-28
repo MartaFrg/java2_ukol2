@@ -16,12 +16,16 @@ import java.util.stream.Collectors;
 @Controller
 public class QuotationController {
     private final Random random = new Random();
+    private List<String> listOfImages;
+
     @GetMapping("/")
     public ModelAndView citaty() throws IOException {
         List citatyList = prectiCitaty("citaty.txt");
         int cisloCitatu = random.nextInt(8);
+        listOfImages=List.of("sC4g85ssOwA","8AoiLR9DOqc","MpyiM0FKxL8","w8NcD5tSu_k","mS0v4ilJgBA","u2IZda2Dn6A","spz5zbmOSiU","WvA2RaOSThk");
         ModelAndView result = new ModelAndView("citaty");
         result.addObject("citat", citatyList.get(cisloCitatu));
+        result.addObject("imageURL", "https://source.unsplash.com/"+ listOfImages.get(cisloCitatu) +"/1600x900");
         return result;
     }
 
