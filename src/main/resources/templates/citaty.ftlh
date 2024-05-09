@@ -10,7 +10,7 @@
     <link href="/images/favicon.png" rel="icon" type="image/png">
 </head>
 <body style="background-image: url(${imageURL});">
-<blockquote><strong>Debugging</strong> /de·bugh·ing/ <em>verb</em><br/>${citat}
+<blockquote><strong>Debugging</strong> /de·bugh·ing/ <em>verb</em><br/><font color="#9900FF">${citat}</font>
 </blockquote>
 </body>
 </html>
